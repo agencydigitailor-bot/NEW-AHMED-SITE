@@ -2,7 +2,7 @@
 import React from 'react';
 import Section from '../components/Section';
 import FlatButton from '../components/FlatButton';
-import { Target, Activity, Heart, Wind, ChevronRight, FileText, Share2, GraduationCap, ShieldCheck, MonitorSmartphone, PlayCircle, Stethoscope, Zap } from 'lucide-react';
+import { Target, FileText, Share2, GraduationCap, ShieldCheck, MonitorSmartphone, PlayCircle, Stethoscope, Zap } from 'lucide-react';
 
 
 const YouTubeEmbed = ({ videoId, title }: { videoId: string, title: string }) => (

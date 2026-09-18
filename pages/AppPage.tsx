@@ -2,9 +2,9 @@ import React from 'react';
 import Section from '../components/Section';
 import FlatButton from '../components/FlatButton';
 import FlatCard from '../components/FlatCard';
-import { Layers, Archive, Tablet, Clock, Users, Smartphone, Sparkles } from 'lucide-react';
+import { Layers, Archive, Tablet, Clock, Users, Smartphone } from 'lucide-react';
 
-const App: React.FC = () => {
+const AppPage: React.FC = () => {
     return (
         <div className="animate-fade-up">
             {/* Hero Section with Video Background */}
@@ -19,7 +19,6 @@ const App: React.FC = () => {
                         className="w-full h-full object-cover opacity-85"
                     >
                         <source src="/hero-bg.mp4" type="video/mp4" />
-                        <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260302_085844_21a8f4b3-dea5-4ede-be16-d53f6973bb14.mp4" type="video/mp4" />
                     </video>
                     <div className="absolute inset-0 bg-gradient-to-b from-slate-950/40 via-slate-900/20 to-slate-950/60 pointer-events-none"></div>
                 </div>
@@ -135,4 +134,4 @@ const App: React.FC = () => {
     );
 };
 
-export default App;
+export default AppPage;

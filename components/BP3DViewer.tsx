@@ -1,31 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { RotateCw, Maximize2, Sparkles } from 'lucide-react';
-
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      'model-viewer': React.DetailedHTMLProps<
-        React.HTMLAttributes<HTMLElement> & {
-          src?: string;
-          alt?: string;
-          poster?: string;
-          'camera-controls'?: boolean | string;
-          'auto-rotate'?: boolean | string;
-          'auto-rotate-delay'?: string | number;
-          'rotation-per-second'?: string;
-          'shadow-intensity'?: string | number;
-          'shadow-softness'?: string | number;
-          'exposure'?: string | number;
-          'camera-orbit'?: string;
-          'touch-action'?: string;
-          loading?: 'auto' | 'lazy' | 'eager';
-          reveal?: 'auto' | 'interaction' | 'manual';
-        },
-        HTMLElement
-      >;
-    }
-  }
-}
+import { RotateCw, Maximize2 } from 'lucide-react';
 
 interface BP3DViewerProps {
   className?: string;
@@ -91,7 +65,7 @@ const BP3DViewer: React.FC<BP3DViewerProps> = ({ className = '' }) => {
           type="button"
           onClick={toggleAutoRotate}
           title={isRotating ? 'Pauzeer rotatie' : 'Start rotatie'}
-          className="w-8 h-8 rounded-full bg-slate-900/80 backdrop-blur-md border border-cyan-500/30 shadow-sm flex items-center justify-center text-cyan-200 hover:text-white hover:bg-cyan-600 transition-all cursor-pointer"
+          className="w-8 h-8 rounded-full bg-white/85 hover:bg-white text-sky-900 hover:text-blue-600 border border-white/80 shadow-md flex items-center justify-center transition-all cursor-pointer backdrop-blur-sm"
         >
           <RotateCw className={`w-3.5 h-3.5 transition-transform ${isRotating ? 'animate-spin' : ''}`} style={{ animationDuration: '6s' }} />
         </button>
@@ -99,7 +73,7 @@ const BP3DViewer: React.FC<BP3DViewerProps> = ({ className = '' }) => {
           type="button"
           onClick={handleResetCamera}
           title="Reset weergave"
-          className="w-8 h-8 rounded-full bg-slate-900/80 backdrop-blur-md border border-cyan-500/30 shadow-sm flex items-center justify-center text-cyan-200 hover:text-white hover:bg-cyan-600 transition-all cursor-pointer"
+          className="w-8 h-8 rounded-full bg-white/85 hover:bg-white text-sky-900 hover:text-blue-600 border border-white/80 shadow-md flex items-center justify-center transition-all cursor-pointer backdrop-blur-sm"
         >
           <Maximize2 className="w-3.5 h-3.5" />
         </button>
@@ -107,7 +81,7 @@ const BP3DViewer: React.FC<BP3DViewerProps> = ({ className = '' }) => {
 
       {/* Helper interaction hint */}
       {!interacted && (
-        <div className="absolute bottom-3 inset-x-0 mx-auto w-max z-10 px-3 py-1 rounded-full bg-slate-950/80 border border-cyan-500/30 backdrop-blur-md text-[11px] font-medium text-cyan-200 pointer-events-none transition-opacity duration-500">
+        <div className="absolute bottom-3 inset-x-0 mx-auto w-max z-10 px-3 py-1 rounded-full bg-white/90 border border-white/90 shadow-sm backdrop-blur-md text-[11px] font-semibold text-sky-950 pointer-events-none transition-opacity duration-500">
           Sleep om te draaien • Scroll om in te zoomen
         </div>
       )}

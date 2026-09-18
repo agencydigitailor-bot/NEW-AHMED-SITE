@@ -120,8 +120,11 @@ const MTablet: React.FC = () => {
         </div>
       </Section>
 
-      {/* 2. Modules Overview (Clean White Page Background with Deep Bluish Containers) */}
-      <section className="py-24 relative overflow-hidden bg-white">
+      {/* 2. Modules Overview (Clean Studio Blue & Light Atmosphere) */}
+      <section className="py-24 relative overflow-hidden bg-gradient-to-b from-[#ebf7fe] via-[#f4fafe] to-[#e8f5fd]">
+        {/* Soft studio ambient light */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-[radial-gradient(ellipse_at_center,rgba(167,222,253,0.45)_0%,transparent_70%)] pointer-events-none" />
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
             <h2 className="text-3xl sm:text-5xl font-black uppercase text-gray-900 tracking-tight">
@@ -137,14 +140,14 @@ const MTablet: React.FC = () => {
               return (
                 <div 
                   key={module.id} 
-                  className={`flex flex-col lg:flex-row gap-10 lg:gap-14 items-center bg-white p-8 sm:p-10 rounded-3xl border border-gray-200/90 shadow-lg hover:shadow-xl transition-all duration-300 ${idx % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}
+                  className={`flex flex-col lg:flex-row gap-10 lg:gap-14 items-center bg-white p-8 sm:p-10 rounded-3xl border border-sky-100 shadow-xl hover:shadow-2xl transition-all duration-300 ${idx % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}
                 >
-                  {/* 3D Model Container: Exactly Matched to hero-bg.mp4 Blue */}
+                  {/* 3D Model Container: Studio Blue Gradient from Reference */}
                   <div className="flex-1 w-full flex justify-center">
-                    <div className="w-full max-w-md h-80 sm:h-96 rounded-2xl p-4 sm:p-6 flex items-center justify-center bg-gradient-to-b from-[#013972] via-[#0451A3] to-[#013972] border border-[#126FD6]/40 shadow-[inset_0_2px_20px_rgba(0,30,70,0.4)] relative overflow-hidden">
-                      {/* Ambient Radial Spotlight matched to hero-bg.mp4 electric highlight */}
-                      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(76,153,245,0.35)_0%,transparent_70%)] pointer-events-none" />
-                      <div className="absolute bottom-0 inset-x-8 h-12 bg-gradient-to-t from-[#4C99F5]/25 to-transparent blur-md pointer-events-none" />
+                    <div className="w-full max-w-md h-80 sm:h-96 rounded-2xl p-4 sm:p-6 flex items-center justify-center bg-[radial-gradient(ellipse_at_50%_35%,#8ed6fd_0%,#4ca7eb_45%,#207ec4_80%,#1162a1_100%)] border border-sky-200/60 shadow-[inset_0_2px_15px_rgba(255,255,255,0.4),0_12px_32px_rgba(18,104,168,0.22)] relative overflow-hidden">
+                      {/* Ambient studio spotlight highlight */}
+                      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_25%,rgba(255,255,255,0.45)_0%,transparent_65%)] pointer-events-none" />
+                      <div className="absolute bottom-0 inset-x-4 h-16 bg-gradient-to-t from-white/20 via-sky-200/10 to-transparent blur-sm pointer-events-none" />
                       
                       <ViewerComponent className="w-full h-full" />
                     </div>

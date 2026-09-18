@@ -4,12 +4,10 @@ import FlatButton from '../components/FlatButton';
 import { 
   HeartPulse, 
   CheckCircle2, 
-  Clock, 
   FileText, 
   Phone, 
   Mail, 
   ExternalLink, 
-  ArrowRight, 
   Sparkles,
   Zap,
   Activity,

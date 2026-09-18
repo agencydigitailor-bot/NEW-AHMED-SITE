@@ -12,7 +12,7 @@ import Holter from './pages/Holter';
 import OverOns from './pages/OverOns';
 import Contact from './pages/Contact';
 import Documenten from './pages/Documenten';
-import AppPage from './pages/App';
+import AppPage from './pages/AppPage';
 
 const ScrollToTop = () => {
   const { pathname, hash } = useLocation();

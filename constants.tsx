@@ -6,10 +6,6 @@ import {
   Wind,
   Watch,
   Smartphone,
-  Stethoscope,
-  FileText,
-  PhoneCall,
-  Info,
   ChevronRight
 } from 'lucide-react';
 import { NavItem, ServiceItem } from './types';
