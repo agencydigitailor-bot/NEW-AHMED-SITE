@@ -82,12 +82,12 @@ const Layout: React.FC = () => {
       {/* Sticky Header Wrapper */}
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
         {/* Main Navbar */}
-        <nav className="max-w-7xl mx-auto px-6 h-24 sm:h-28 flex items-center justify-between">
+        <nav className="max-w-7xl mx-auto px-6 h-12 sm:h-14 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-4 group py-1">
             <img
               src="/logo.png"
               alt="AH Medische Dienstverlening"
-              className="h-16 sm:h-20 md:h-22 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+              className="h-8 sm:h-10 md:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
             />
           </Link>
 
